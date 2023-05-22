@@ -1,0 +1,11 @@
+USE first_seminar;
+CREATE TABLE teacher(id int primary key not null, name varchar(45), post varchar(45));
+CREATE TABLE course(id int primary key not null, name varchar(45), teacherName varchar(45), studentName varchar(45));
+INSERT `teacher` (`name`, `post`) VALUES ('Johnr', 'professor'), ('Vladimir', 'assistent');
+INSERT `course` (`id`,`name`, `teacherName`, `studentName`) VALUES ('1', 'JavaScript','John', 'Anna'), ('2', 'Pyhon', 'Vladislav', 'Dima');
+SELECT * FROM student;
+SELECT * FROM student WHERE name = 'Dima';
+SELECT name, email FROM student;
+SELECT * FROM student WHERE name like '%a%';
+SELECT * FROM student WHERE scholarship > 6000;
+SELECT * FROM student WHERE name != 'Dima';
